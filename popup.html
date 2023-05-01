@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify Email Template Updater</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Shopify Email Template Updater</h1>
+
+    <div>
+      <label for="shop-name">Nom de la boutique :</label>
+      <input
+        type="text"
+        id="shop-name"
+        placeholder="Entrez le nom de la boutique"
+      />
+    </div>
+
+    <div>
+      <label for="main-language">Langue principale :</label>
+      <select id="main-language">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="de">Allemand</option>
+        <option value="nl">Néerlandais</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="zip-file">Importer un fichier ZIP :</label>
+      <input type="file" id="zip-file" accept=".zip" />
+    </div>
+
+    <div>
+      <button id="import-btn">Importer</button>
+      <div id="url-list"></div>
+      <button id="create-emails-btn">Créer les mails</button>
+    </div>
+    <script src="jszip.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
